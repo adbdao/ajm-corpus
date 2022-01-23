@@ -1,0 +1,30 @@
+{
+	"name": "ajm",
+	"title": "阿姜曼正傳",
+	"rendClass": [
+		"kai",
+		"b",
+		"tag",
+		"l",
+		"by",
+		"bf",
+		"bz",
+		"ask",
+		"rep",
+		"si",
+		"sr",
+		"year",
+		"h0",
+		"book",
+		"sarticle",
+		"va",
+		"eng",
+		"talk"
+	],
+	"files": [
+		"ajm.xml"
+	],
+	"external":{
+		"footnotes":"footnotes.json"
+	}
+}
