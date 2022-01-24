@@ -1,6 +1,7 @@
 {
 	"name": "ajm",
 	"title": "阿姜曼正傳",
+	"bits":[ 4, 7, 5, 8 ],
 	"rendClass": [
 		"kai",
 		"b",
@@ -21,10 +22,10 @@
 		"eng",
 		"talk"
 	],
+	"external": {
+		"footnotes": "footnotes.json"
+	},
 	"files": [
-		"ajm.xml"
-	],
-	"external":{
-		"footnotes":"footnotes.json"
-	}
+		"ajm.txt"
+	]
 }

@@ -2,11 +2,11 @@
 var fs = require('fs')
 var path = require('path')
 // 可改寫副檔名及編碼
-var x = '.xml'
-var ru = 'utf8'
+var x = '.txt'
+var ru = 'utf16le'
 var wu = 'utf8'
 // 完成後的副檔名
-var afterName = ''
+var afterName = '.log'
 // 建立函數，以便回呼使用
 function XmlAddMypb(go) {
     // 規範化檔案路徑
@@ -31,9 +31,8 @@ function XmlAddMypb(go) {
         // 判斷是否為資料夾，如果是：回呼函數，來執行下一層目錄
         if (c.isDirectory()) {
             // 若只執行當前目錄，則註釋此行，並啟動返回通知
-            // XmlAddMypb(n)
-            console.log('Stop read Directory:' + n)
-            
+            // console.log('Stop read Directory:' + n)
+            XmlAddMypb(n)
             // 判斷是否為所要轉換的副檔名的檔案
         } else if (path.extname(n) == x) {
 
@@ -49,29 +48,10 @@ function XmlAddMypb(go) {
             // b[0].replace(/[0xEF|0xBB|0xBF]/,'')
 
             // 加上批次頁碼
-            // 預設變量，才能累加頁碼
-            var s0 = 0
-            var s1 = 0
-            var s2 = 1
-            for (var i = 1; i < b.length; i++) {
+            for (var i = 0, j = 1; i < b.length; i += 20, j++) {
                 // <pb>不能寫在b[0]之前，否則「位元組順序記號」 EF BB BF ，會跑到第2行，變成亂碼
-                // b[i] = b[i] + '<pb n="' + j + '"/>'
-                // 先刪除舊的<頁>標記
-                b[i] = b[i].replace(/<頁 id.+>/, '')
-                // 加上頁碼
-                if (/<article/.test(b[i]) || s2 > 999) {
-                    s2 = 1
-                    s1++
-                    b[i] = '<pb n="' + s1 + '.' + s2 + '"/>\n' + b[i]
-                    s0 = i + 30
-                }
-                if (i == s0) {
-                    s2++
-                    b[i] = '<pb n="' + s1 + '.' + s2 + '"/>\n' + b[i]
-                    s0 = i + 30
-                }
+                b[i] = b[i] + '<pb n="' + j + '"/>'
             }
-
             // 用絕對路徑寫入檔案
             fs.writeFileSync(n + afterName, b.join('\n'), wu)
             // 完成時返回通知
