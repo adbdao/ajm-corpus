@@ -22,6 +22,27 @@
 		"eng",
 		"talk"
 	],
+	"images": [
+		"ajm/阿姜曼正傳封面.jpg",
+		"ajm/戒寶尊者.jpg",
+		"ajm/阿姜摩訶布瓦尊者1.jpg",
+		"ajm/阿姜摩訶布瓦尊者2.jpg",
+		"ajm/阿姜曼戒師.jpg",
+		"ajm/阿姜曼戒碟.jpg",
+		"ajm/阿姜紹尊者.jpg",
+		"ajm/阿姜曼的弟子們1.jpg",
+		"ajm/阿姜曼的弟子們2.jpg",
+		"ajm/阿姜曼的弟子們3.jpg",
+		"ajm/阿姜曼的弟子們4.jpg",
+		"ajm/阿姜曼的弟子們5.jpg",
+		"ajm/阿姜曼的弟子們6.jpg",
+		"ajm/阿姜曼的弟子們7.jpg",
+		"ajm/阿姜曼的弟子們8.jpg",
+		"ajm/阿姜曼習法的長老.jpg",
+		"ajm/舍利.jpg",
+		"ajm/阿姜措.jpg",
+		"ajm/戒寶尊者.jpg"
+	],
 	"external": {
 		"footnotes": "footnotes.json"
 	},
