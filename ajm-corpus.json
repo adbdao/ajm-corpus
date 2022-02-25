@@ -44,9 +44,9 @@
 		"ajm/戒寶尊者.jpg"
 	],
 	"external": {
-		"footnotes": "footnotes.json"
+		"footnotes": "json/a.json"
 	},
 	"files": [
-		"ajm.txt"
+		"ajm.xml"
 	]
 }
